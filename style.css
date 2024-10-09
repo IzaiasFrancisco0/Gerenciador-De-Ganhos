@@ -1,0 +1,187 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+select.ativar{
+    background-color: green;
+}
+select.ativou{
+    background-color: red;
+}
+header{
+    background-color: orange;
+    height: 7vh;
+    display: flex;
+    align-items: center;
+}
+header a{
+    font-size: 20px;
+    padding-left: 20px;
+    text-decoration: none;
+    color: rgb(14, 13, 13);
+}
+header a:hover{
+    color: #f5f4f4;
+}
+#secao-tabela{
+    display: none;
+    background-color: rgb(19, 18, 18);
+    height: 92vh;
+    color: white;
+}
+#secao-tabela h1{
+    text-align: center;
+    padding-top: 40px;
+    padding-bottom: 30px ;
+    color: orange;
+}
+#secao-tabela.ativarTabela{
+    display: block;
+}
+#secao-prencher.sumir{
+    display: none;
+}
+#secao-prencher.mostrar{
+    display: block;
+}
+#table{
+    width: 70%;
+    margin-left: 15%;
+    overflow-y: scroll;
+}
+#secao-prencher{
+    background-color: rgb(20, 20, 20);
+    height: 93vh;
+    width: 100%;  
+}
+#formulario{
+    margin-left: 40%;
+    display: flex;
+    flex-direction: column;
+    width: 300px;
+    height: 500px;
+}
+#formulario h2{
+    color: orange;
+    text-align: center;
+    padding-bottom: 30px;
+    margin-top: 300px;
+}
+#formulario input, button, select{
+    padding: 13px;
+    margin-top: 10px;
+    border-radius: 5px;
+    border: none;
+    font-size: 18px;
+    transition: 0.5s ease-in-out;
+}
+#fomrulario input:hover{
+    border: none;
+}
+#enviar:hover{
+  background-color: orange;
+  color: #fff;
+  cursor: pointer;
+}
+#span-enviar.mostrar-span{
+    display: block;
+}
+#span-enviar.esconder {
+    opacity: 0;
+    transition: opacity 0.5s ease-out; /* Efeito suave ao esconder */
+}
+#span-enviar{
+    display: none;
+    font-size: 18px;
+    text-align: center;
+    color: orange;
+    padding-top: 20px;
+}
+#mes-selecao{
+    position: absolute;
+    left: 1%;
+    top: 8%;
+}
+table {
+    width: 100%; /* A tabela ocupa toda a largura disponível */
+    border-collapse: collapse; /* Remove espaços entre as bordas das células */
+}
+thead, tbody tr {
+    display: table;
+    width: 100%; /* Faz com que as colunas da tabela tenham largura completa */
+    table-layout: fixed; /* Garante que as colunas fiquem corretamente alinhadas */
+}
+thead th{
+    font-size: 22px;
+    color: orange;
+    padding-bottom: 5px;
+}
+tbody {
+    display: block;
+    max-height: 700px; /* Altura fixa para o corpo da tabela */
+    overflow-y: auto; /* Ativa a barra de rolagem quando necessário */
+    scrollbar-width: thin; /* Para navegadores como Firefox */
+    scrollbar-color: orange #141414; /* Cores para Firefox */
+    border-radius: 5px;
+    box-shadow: 2px 2px 2px rgb(48, 48, 48);
+}
+#table tr{
+    border-bottom: 2px solid white;
+}
+#table tr td{
+    border: 2px solid black;
+    text-align: center;
+    padding: 15px;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    color: black;
+}
+#table td.red{
+    background-color: red;
+}
+#table td.green{
+    background-color: green;
+}
+.meta-batida {
+    background-color: #d4edda; 
+    color: #155724; 
+}
+.meta-nao-batida {
+    background-color: #f8d7da; 
+    color: #721c24; 
+}
+tbody::-webkit-scrollbar {
+    width: 10px; 
+}
+tbody::-webkit-scrollbar-track {
+    background: #f1f1f1; 
+}
+tbody::-webkit-scrollbar-thumb {
+    background-color: #888; 
+    border-radius: 10px; 
+    border: 2px solid #f1f1f1; 
+}
+tbody::-webkit-scrollbar-thumb:hover {
+    background-color: #555; 
+}
+
+@media (width < 400px){
+    #formulario{
+        margin-left: 7%;
+    }
+    #table{
+        width: 99%;
+        margin-left: 1%;
+    }
+    #table tr td{
+        font-size: 17px;
+    }
+    thead th{
+        font-size: 19px;
+    }
+    #secao-tabela h1{
+        padding-top: 100px;
+    }
+}
